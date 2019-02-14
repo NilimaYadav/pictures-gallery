@@ -1,4 +1,7 @@
 {{#each photos as |photo|}}
-<h2>{{photo.title}}</h2>
-<p><img src="{{photo.thumbnailUrl}}"></p>
+<div>
+	<h2>{{photo.title}}</h2>
+	<p><button><img src="{{photo.thumbnailUrl}}"{{action 'move' photo}}></button></p>
+</div>
 {{/each}} 
+{{outlet}}

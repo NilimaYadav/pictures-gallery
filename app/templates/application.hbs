@@ -1,3 +1,26 @@
-<h1>welcome</h1>
+	<div class="container">
+  
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navb">
+         
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        {{#link-to 'index' class="navbar-brand"}}image gallery{{/link-to}}
+      </div>
+
+      <div class="collapse navbar-collapse" id="main-navbar">
+        <ul class="nav navbar-nav">
+              {{#link-to 'index' tagName="li"}}<a href="">Home</a>{{/link-to}}
+              {{#link-to 'photos' tagName="li"}}<a href="">Photos</a>{{/link-to}}
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+</div>
 
 {{outlet}}
