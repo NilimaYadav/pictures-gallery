@@ -13,6 +13,8 @@ export default Route.extend({
         move(photo){
         	debugger
             this.get('router').transitionTo('photos.show', photo.get('id'));
-        },
+        }
     }
+
+
 });
