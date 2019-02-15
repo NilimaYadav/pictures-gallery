@@ -4,11 +4,14 @@ const{ Route,set}=Ember;
 export default Route.extend({
 	model(params){
 		return this.store.findRecord('photo',params.id);
+		 return this.store.find('comment');
 	},
+	
 	
 	setupController(controller,model){
 		set(controller,'photo',model);
 	},
+	
 
 	actions:{
     	addComment(comment){
@@ -17,6 +20,9 @@ export default Route.extend({
     			description: comment
     		})
     		this.controller.set('comment', null);
-    	}
+    	},
+    	// like(){
+    	// 	this.get('likebutton').toggle.color="blue";
+    	// }
     }
 });
